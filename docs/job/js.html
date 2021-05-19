@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js 基础面试题 | 天宝的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="ltbicon.ico">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9ac22a1b.css" as="style"><link rel="preload" href="/blog/assets/js/app.687ffe2b.js" as="script"><link rel="preload" href="/blog/assets/js/3.ff536d22.js" as="script"><link rel="preload" href="/blog/assets/js/1.7fa5a73b.js" as="script"><link rel="preload" href="/blog/assets/js/100.0fd57d77.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.7811cf9c.js"><link rel="prefetch" href="/blog/assets/js/101.d7e10aed.js"><link rel="prefetch" href="/blog/assets/js/102.a802fa26.js"><link rel="prefetch" href="/blog/assets/js/103.2bd3f5cf.js"><link rel="prefetch" href="/blog/assets/js/104.b82e3c16.js"><link rel="prefetch" href="/blog/assets/js/105.0e864923.js"><link rel="prefetch" href="/blog/assets/js/106.8aa4623e.js"><link rel="prefetch" href="/blog/assets/js/107.8b6da6d3.js"><link rel="prefetch" href="/blog/assets/js/108.635143a1.js"><link rel="prefetch" href="/blog/assets/js/109.c983a152.js"><link rel="prefetch" href="/blog/assets/js/11.8bf50aa2.js"><link rel="prefetch" href="/blog/assets/js/110.fa0b5178.js"><link rel="prefetch" href="/blog/assets/js/111.9970a0b3.js"><link rel="prefetch" href="/blog/assets/js/112.faee7154.js"><link rel="prefetch" href="/blog/assets/js/113.6b841150.js"><link rel="prefetch" href="/blog/assets/js/114.ade88f64.js"><link rel="prefetch" href="/blog/assets/js/115.9689fd9e.js"><link rel="prefetch" href="/blog/assets/js/116.935a74b2.js"><link rel="prefetch" href="/blog/assets/js/117.4254d6a2.js"><link rel="prefetch" href="/blog/assets/js/118.3d4dd0ae.js"><link rel="prefetch" href="/blog/assets/js/119.98962333.js"><link rel="prefetch" href="/blog/assets/js/12.5703efc2.js"><link rel="prefetch" href="/blog/assets/js/120.ced6b99e.js"><link rel="prefetch" href="/blog/assets/js/121.ccd81d4f.js"><link rel="prefetch" href="/blog/assets/js/122.8d9244f4.js"><link rel="prefetch" href="/blog/assets/js/123.eb3ec25c.js"><link rel="prefetch" href="/blog/assets/js/124.7d44ab6b.js"><link rel="prefetch" href="/blog/assets/js/125.1d8fe1a9.js"><link rel="prefetch" href="/blog/assets/js/126.0a27828d.js"><link rel="prefetch" href="/blog/assets/js/127.e2401e24.js"><link rel="prefetch" href="/blog/assets/js/128.0a210a87.js"><link rel="prefetch" href="/blog/assets/js/129.459e7171.js"><link rel="prefetch" href="/blog/assets/js/13.4f40b008.js"><link rel="prefetch" href="/blog/assets/js/130.647ef7a4.js"><link rel="prefetch" href="/blog/assets/js/131.760e43f5.js"><link rel="prefetch" href="/blog/assets/js/132.bd66c55c.js"><link rel="prefetch" href="/blog/assets/js/133.3506297d.js"><link rel="prefetch" href="/blog/assets/js/134.68dba789.js"><link rel="prefetch" href="/blog/assets/js/135.e4abb66e.js"><link rel="prefetch" href="/blog/assets/js/136.569d2a52.js"><link rel="prefetch" href="/blog/assets/js/137.639eeabc.js"><link rel="prefetch" href="/blog/assets/js/138.3cfc0811.js"><link rel="prefetch" href="/blog/assets/js/139.4aab0e24.js"><link rel="prefetch" href="/blog/assets/js/14.1f525197.js"><link rel="prefetch" href="/blog/assets/js/140.e497184d.js"><link rel="prefetch" href="/blog/assets/js/141.2e1ef077.js"><link rel="prefetch" href="/blog/assets/js/142.ecf60e8c.js"><link rel="prefetch" href="/blog/assets/js/143.ef1fc9a3.js"><link rel="prefetch" href="/blog/assets/js/144.30ee7fe4.js"><link rel="prefetch" href="/blog/assets/js/145.5380861a.js"><link rel="prefetch" href="/blog/assets/js/146.c7638a16.js"><link rel="prefetch" href="/blog/assets/js/147.51c74ed4.js"><link rel="prefetch" href="/blog/assets/js/148.38ab89ba.js"><link rel="prefetch" href="/blog/assets/js/149.d66425c7.js"><link rel="prefetch" href="/blog/assets/js/15.28dbd265.js"><link rel="prefetch" href="/blog/assets/js/150.33b52a68.js"><link rel="prefetch" href="/blog/assets/js/151.d0f10f89.js"><link rel="prefetch" href="/blog/assets/js/152.f7a60845.js"><link rel="prefetch" href="/blog/assets/js/153.5860859c.js"><link rel="prefetch" href="/blog/assets/js/154.74a0c170.js"><link rel="prefetch" href="/blog/assets/js/155.41556a70.js"><link rel="prefetch" href="/blog/assets/js/156.816610c8.js"><link rel="prefetch" href="/blog/assets/js/157.a5704751.js"><link rel="prefetch" href="/blog/assets/js/158.76d7e1d1.js"><link rel="prefetch" href="/blog/assets/js/159.5b9426eb.js"><link rel="prefetch" href="/blog/assets/js/16.643901bb.js"><link rel="prefetch" href="/blog/assets/js/160.880b0add.js"><link rel="prefetch" href="/blog/assets/js/161.8bb033d1.js"><link rel="prefetch" href="/blog/assets/js/162.4f9d9e66.js"><link rel="prefetch" href="/blog/assets/js/163.de1f884e.js"><link rel="prefetch" href="/blog/assets/js/164.facff600.js"><link rel="prefetch" href="/blog/assets/js/165.fd077cf6.js"><link rel="prefetch" href="/blog/assets/js/17.b63583ce.js"><link rel="prefetch" href="/blog/assets/js/18.83d571a3.js"><link rel="prefetch" href="/blog/assets/js/19.03b696f0.js"><link rel="prefetch" href="/blog/assets/js/20.f9740790.js"><link rel="prefetch" href="/blog/assets/js/21.d6d9c3a3.js"><link rel="prefetch" href="/blog/assets/js/22.0dd3eafe.js"><link rel="prefetch" href="/blog/assets/js/23.2551f809.js"><link rel="prefetch" href="/blog/assets/js/24.0cc0d67f.js"><link rel="prefetch" href="/blog/assets/js/25.0df0ac85.js"><link rel="prefetch" href="/blog/assets/js/26.5d50b9e4.js"><link rel="prefetch" href="/blog/assets/js/27.44305569.js"><link rel="prefetch" href="/blog/assets/js/28.915e74c8.js"><link rel="prefetch" href="/blog/assets/js/29.4719dafe.js"><link rel="prefetch" href="/blog/assets/js/30.96f0297d.js"><link rel="prefetch" href="/blog/assets/js/31.66621384.js"><link rel="prefetch" href="/blog/assets/js/32.8e6fdf52.js"><link rel="prefetch" href="/blog/assets/js/33.14e4ecc0.js"><link rel="prefetch" href="/blog/assets/js/34.1a3484c8.js"><link rel="prefetch" href="/blog/assets/js/35.9f0ae752.js"><link rel="prefetch" href="/blog/assets/js/36.6e9bcb65.js"><link rel="prefetch" href="/blog/assets/js/37.46bdcf5f.js"><link rel="prefetch" href="/blog/assets/js/38.571c3ed1.js"><link rel="prefetch" href="/blog/assets/js/39.9f73485e.js"><link rel="prefetch" href="/blog/assets/js/4.a977e4e6.js"><link rel="prefetch" href="/blog/assets/js/40.e9026e9b.js"><link rel="prefetch" href="/blog/assets/js/41.bec4aa5f.js"><link rel="prefetch" href="/blog/assets/js/42.894e4c86.js"><link rel="prefetch" href="/blog/assets/js/43.fee1a1e3.js"><link rel="prefetch" href="/blog/assets/js/44.1e48416f.js"><link rel="prefetch" href="/blog/assets/js/45.50d0485a.js"><link rel="prefetch" href="/blog/assets/js/46.eb4e0e29.js"><link rel="prefetch" href="/blog/assets/js/47.8aef9542.js"><link rel="prefetch" href="/blog/assets/js/48.a7a422cd.js"><link rel="prefetch" href="/blog/assets/js/49.62def235.js"><link rel="prefetch" href="/blog/assets/js/5.f38d24eb.js"><link rel="prefetch" href="/blog/assets/js/50.d56cc481.js"><link rel="prefetch" href="/blog/assets/js/51.b7fdf9ea.js"><link rel="prefetch" href="/blog/assets/js/52.068bc616.js"><link rel="prefetch" href="/blog/assets/js/53.f7228307.js"><link rel="prefetch" href="/blog/assets/js/54.27b734f9.js"><link rel="prefetch" href="/blog/assets/js/55.d2527b46.js"><link rel="prefetch" href="/blog/assets/js/56.ee533c2b.js"><link rel="prefetch" href="/blog/assets/js/57.57a367a8.js"><link rel="prefetch" href="/blog/assets/js/58.c43796d6.js"><link rel="prefetch" href="/blog/assets/js/59.0c3f6f10.js"><link rel="prefetch" href="/blog/assets/js/6.c5800dc4.js"><link rel="prefetch" href="/blog/assets/js/60.ca9096aa.js"><link rel="prefetch" href="/blog/assets/js/61.2ff75e19.js"><link rel="prefetch" href="/blog/assets/js/62.dc27ceed.js"><link rel="prefetch" href="/blog/assets/js/63.e741e1db.js"><link rel="prefetch" href="/blog/assets/js/64.7161b504.js"><link rel="prefetch" href="/blog/assets/js/65.ba751267.js"><link rel="prefetch" href="/blog/assets/js/66.16cfbc18.js"><link rel="prefetch" href="/blog/assets/js/67.1976d51b.js"><link rel="prefetch" href="/blog/assets/js/68.72e3dd60.js"><link rel="prefetch" href="/blog/assets/js/69.17c5fd5d.js"><link rel="prefetch" href="/blog/assets/js/7.f10b9e9a.js"><link rel="prefetch" href="/blog/assets/js/70.25106d2b.js"><link rel="prefetch" href="/blog/assets/js/71.0eb8af30.js"><link rel="prefetch" href="/blog/assets/js/72.5a69e4cf.js"><link rel="prefetch" href="/blog/assets/js/73.5ed13df1.js"><link rel="prefetch" href="/blog/assets/js/74.87b7a5a0.js"><link rel="prefetch" href="/blog/assets/js/75.d54720c8.js"><link rel="prefetch" href="/blog/assets/js/76.fb6decb6.js"><link rel="prefetch" href="/blog/assets/js/77.f07a65c5.js"><link rel="prefetch" href="/blog/assets/js/78.f74ac6e9.js"><link rel="prefetch" href="/blog/assets/js/79.abf78ffc.js"><link rel="prefetch" href="/blog/assets/js/8.2cce7b77.js"><link rel="prefetch" href="/blog/assets/js/80.0fceca43.js"><link rel="prefetch" href="/blog/assets/js/81.a5b39edf.js"><link rel="prefetch" href="/blog/assets/js/82.e8b4a8ab.js"><link rel="prefetch" href="/blog/assets/js/83.652394c5.js"><link rel="prefetch" href="/blog/assets/js/84.582d043e.js"><link rel="prefetch" href="/blog/assets/js/85.9c965c7d.js"><link rel="prefetch" href="/blog/assets/js/86.6141b58b.js"><link rel="prefetch" href="/blog/assets/js/87.45c26684.js"><link rel="prefetch" href="/blog/assets/js/88.1cbf5f2d.js"><link rel="prefetch" href="/blog/assets/js/89.b8f01749.js"><link rel="prefetch" href="/blog/assets/js/9.e474432d.js"><link rel="prefetch" href="/blog/assets/js/90.5cf46f3e.js"><link rel="prefetch" href="/blog/assets/js/91.09818d72.js"><link rel="prefetch" href="/blog/assets/js/92.b736e658.js"><link rel="prefetch" href="/blog/assets/js/93.120031ba.js"><link rel="prefetch" href="/blog/assets/js/94.ab208182.js"><link rel="prefetch" href="/blog/assets/js/95.9f305b54.js"><link rel="prefetch" href="/blog/assets/js/96.d85f3c59.js"><link rel="prefetch" href="/blog/assets/js/97.ec688ab6.js"><link rel="prefetch" href="/blog/assets/js/98.92ba50b2.js"><link rel="prefetch" href="/blog/assets/js/99.bf13c944.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9ac22a1b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-36818f98><div data-v-36818f98><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-36818f98 data-v-36818f98><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-0541ff4e data-v-36818f98 data-v-36818f98><h3 class="title" style="display:none;" data-v-0541ff4e data-v-0541ff4e>天宝的博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-0541ff4e data-v-0541ff4e><input type="password" value="" data-v-0541ff4e> <span data-v-0541ff4e>Konck! Knock!</span> <button data-v-0541ff4e>OK</button></label> <div class="footer" style="display:none;" data-v-0541ff4e data-v-0541ff4e><span data-v-0541ff4e><i class="iconfont reco-theme" data-v-0541ff4e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-0541ff4e>vuePress-theme-reco</a></span> <span data-v-0541ff4e><i class="iconfont reco-copyright" data-v-0541ff4e></i> <a data-v-0541ff4e><span data-v-0541ff4e>天宝的博客</span>
+            
+          <span data-v-0541ff4e>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-36818f98><header class="navbar" data-v-36818f98><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/ltbLogo.png" alt="天宝的博客" class="logo"> <span class="site-name">天宝的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">选择主题</h4> <ul class="color-mode-options"><li class="dark">
+      黑色
+    </li><li class="auto active">
+      自动
+    </li><li class="light">
+      白色
+    </li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fun/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/eslint.html" class="nav-link"><i class="iconfont undefined"></i>
+  eslint规则
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/scaffold.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入浅出前端脚手架
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/md.html" class="nav-link"><i class="iconfont undefined"></i>
+  markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/static/1_1.html" class="nav-link"><i class="iconfont undefined"></i>
+  全栈入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/dd/1-3.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS高级导读
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fe/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/coding/blog.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-tag"></i>
+      日常总结
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/inherit.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS继承
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js-tip.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS各种小知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/wechat.html" class="nav-link"><i class="iconfont undefined"></i>
+  公众号开发总结
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/mp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序原生开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/uniapp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序uni-app开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/phone/optimize.html" class="nav-link"><i class="iconfont undefined"></i>
+  移动端优化与踩坑
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  web性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/es6/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  ES6知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  Git常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      webpack知识
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-base.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-note.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack随手记
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack配置vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack4 拆包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      技术积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS样式封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS方法封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS手写源码
+</a></li><li class="dropdown-item"><!----> <a href="/blog/skulpt/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入skulpt
+</a></li><li class="dropdown-item"><!----> <a href="/blog/scratch/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入scratch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  SSR搭建部署
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/c1.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用特效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      实战分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  开发环境配置参考
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue服务端渲染
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/iris.html" class="nav-link"><i class="iconfont undefined"></i>
+  go+vue前后端分离实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/uni.html" class="nav-link"><i class="iconfont undefined"></i>
+  uni-app多端开发回顾
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/koa.html" class="nav-link"><i class="iconfont undefined"></i>
+  koa+vue全栈开发实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试必备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/write/write.html" class="nav-link"><i class="iconfont undefined"></i>
+  笔试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      其他
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-36818f98></div> <aside class="sidebar" data-v-36818f98><div class="personal-info-wrapper" data-v-599e9414><img src="/blog/img/ltbLogo.png" alt="author-avatar" class="personal-img" data-v-599e9414> <h3 class="name" data-v-599e9414>
+    天宝的博客
+  </h3> <div class="num" data-v-599e9414><div data-v-599e9414><h3 data-v-599e9414>61</h3> <h6 data-v-599e9414>文章</h6></div> <div data-v-599e9414><h3 data-v-599e9414>9</h3> <h6 data-v-599e9414>标签</h6></div></div> <hr data-v-599e9414></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fun/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/eslint.html" class="nav-link"><i class="iconfont undefined"></i>
+  eslint规则
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/scaffold.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入浅出前端脚手架
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/md.html" class="nav-link"><i class="iconfont undefined"></i>
+  markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/static/1_1.html" class="nav-link"><i class="iconfont undefined"></i>
+  全栈入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/dd/1-3.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS高级导读
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fe/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/coding/blog.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-tag"></i>
+      日常总结
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/inherit.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS继承
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js-tip.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS各种小知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/wechat.html" class="nav-link"><i class="iconfont undefined"></i>
+  公众号开发总结
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/mp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序原生开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/uniapp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序uni-app开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/phone/optimize.html" class="nav-link"><i class="iconfont undefined"></i>
+  移动端优化与踩坑
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  web性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/es6/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  ES6知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  Git常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      webpack知识
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-base.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-note.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack随手记
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack配置vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack4 拆包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      技术积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS样式封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS方法封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS手写源码
+</a></li><li class="dropdown-item"><!----> <a href="/blog/skulpt/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入skulpt
+</a></li><li class="dropdown-item"><!----> <a href="/blog/scratch/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入scratch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  SSR搭建部署
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/c1.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用特效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      实战分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  开发环境配置参考
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue服务端渲染
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/iris.html" class="nav-link"><i class="iconfont undefined"></i>
+  go+vue前后端分离实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/uni.html" class="nav-link"><i class="iconfont undefined"></i>
+  uni-app多端开发回顾
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/koa.html" class="nav-link"><i class="iconfont undefined"></i>
+  koa+vue全栈开发实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试必备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/write/write.html" class="nav-link"><i class="iconfont undefined"></i>
+  笔试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      其他
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>如何面试</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/job/sf.html" class="sidebar-link">js 开发面试常考基础算法题</a></li><li><a href="/blog/job/html.html" class="sidebar-link">HTML 基础知识</a></li><li><a href="/blog/job/css.html" class="sidebar-link">CSS 常见面试基础题</a></li><li><a href="/blog/job/js.html" aria-current="page" class="active sidebar-link">js 基础面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/job/js.html#_1-js中使用typeof能得到哪些类型" class="sidebar-link">1 js中使用typeof能得到哪些类型？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_2-js中有哪些内置函数" class="sidebar-link">2 js中有哪些内置函数？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_3-和-之间的区别" class="sidebar-link">3 ==和===之间的区别？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_4-2-2-2-和-2-2-2的结果" class="sidebar-link">4 2 + 2 + '2' 和 '2' + 2 + 2的结果？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_5-如何准确判断一个变量是数组类型" class="sidebar-link">5 如何准确判断一个变量是数组类型</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_6-split-和-join-的区别" class="sidebar-link">6 split() 和 join() 的区别?</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_7-this几种不同的使用场景" class="sidebar-link">7 this几种不同的使用场景？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_8-break和continue语句的作用" class="sidebar-link">8 break和continue语句的作用？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_9-如何理解json" class="sidebar-link">9 如何理解JSON？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_10-函数声明与函数表达式的区别" class="sidebar-link">10 函数声明与函数表达式的区别？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_11-javascript中定时器" class="sidebar-link">11 JavaScript中定时器?</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_12" class="sidebar-link">12</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_13-js中的继承有哪些" class="sidebar-link">13 js中的继承有哪些？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_14-请谈谈组合继承及写一个例子" class="sidebar-link">14 请谈谈组合继承及写一个例子？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_15-下面三段程序的结果是" class="sidebar-link">15 下面三段程序的结果是？</a></li><li class="sidebar-sub-header"><a href="/blog/job/js.html#_16-下面这段程序的结果是" class="sidebar-link">16 下面这段程序的结果是？</a></li></ul></li><li><a href="/blog/job/bom.html" class="sidebar-link">web开发 浏览器常见面试题</a></li><li><a href="/blog/job/node.html" class="sidebar-link">js 后端开发基础面试题</a></li><li><a href="/blog/job/vue.html" class="sidebar-link">vue 必知面试题</a></li><li><a href="/blog/job/mp.html" class="sidebar-link">微信小程序必知面试题</a></li><li><a href="/blog/job/self.html" class="sidebar-link">为自己出套面试题</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-0541ff4e data-v-36818f98><h3 class="title" style="display:none;" data-v-0541ff4e data-v-0541ff4e></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-0541ff4e data-v-0541ff4e><input type="password" value="" data-v-0541ff4e> <span data-v-0541ff4e>Konck! Knock!</span> <button data-v-0541ff4e>OK</button></label> <div class="footer" style="display:none;" data-v-0541ff4e data-v-0541ff4e><span data-v-0541ff4e><i class="iconfont reco-theme" data-v-0541ff4e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-0541ff4e>vuePress-theme-reco</a></span> <span data-v-0541ff4e><i class="iconfont reco-copyright" data-v-0541ff4e></i> <a data-v-0541ff4e><span data-v-0541ff4e>天宝的博客</span>
+            
+          <span data-v-0541ff4e>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-36818f98><main class="page"><div class="page-title" style="display:none;"><h1>js 基础面试题</h1> <hr> <div data-v-4feec9bb><i class="iconfont reco-account" data-v-4feec9bb><span data-v-4feec9bb>天宝的博客</span></i> <!----> <i class="iconfont reco-eye" data-v-4feec9bb><span id="/blog/job/js.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-4feec9bb><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="js-基础面试题"><a href="#js-基础面试题" class="header-anchor">#</a> js 基础面试题</h1> <h2 id="_1-js中使用typeof能得到哪些类型"><a href="#_1-js中使用typeof能得到哪些类型" class="header-anchor">#</a> 1 js中使用typeof能得到哪些类型？</h2> <p>undefined、string、number、boolean、object、function</p> <h2 id="_2-js中有哪些内置函数"><a href="#_2-js中有哪些内置函数" class="header-anchor">#</a> 2 js中有哪些内置函数？</h2> <p>Object、Array、Boolean、Number、String、Function、Date、RegExp、Error</p> <h2 id="_3-和-之间的区别"><a href="#_3-和-之间的区别" class="header-anchor">#</a> 3 ==和===之间的区别？</h2> <p>==仅检查值相等，而===是一个更严格的等式判定，如果两个变量的值或类型不同，则返回false。</p> <h2 id="_4-2-2-2-和-2-2-2的结果"><a href="#_4-2-2-2-和-2-2-2的结果" class="header-anchor">#</a> 4 2 + 2 + '2' 和 '2' + 2 + 2的结果？</h2> <p>'42'和'222'</p> <h2 id="_5-如何准确判断一个变量是数组类型"><a href="#_5-如何准确判断一个变量是数组类型" class="header-anchor">#</a> 5 如何准确判断一个变量是数组类型</h2> <p>arr instanceof Array</p> <h2 id="_6-split-和-join-的区别"><a href="#_6-split-和-join-的区别" class="header-anchor">#</a> 6 split() 和 join() 的区别?</h2> <p>前者是将字符串切割成数组的形式，后者是将数组转换成字符串</p> <h2 id="_7-this几种不同的使用场景"><a href="#_7-this几种不同的使用场景" class="header-anchor">#</a> 7 this几种不同的使用场景？</h2> <ul><li>在构造函数中使用（构造函数本身）</li> <li>作为对象属性时使用（调用属性的对象）</li> <li>作为普通函数时使用（window）</li> <li>call，apply，bind（执行的第一个参数）</li></ul> <h2 id="_8-break和continue语句的作用"><a href="#_8-break和continue语句的作用" class="header-anchor">#</a> 8 break和continue语句的作用？</h2> <ul><li>break语句从当前循环中退出。</li> <li>continue语句继续下一个循环语句。</li></ul> <h2 id="_9-如何理解json"><a href="#_9-如何理解json" class="header-anchor">#</a> 9 如何理解JSON？</h2> <p>JSON是JS的一个对象，也是一种数据格式，将JSON字符串转换成JSON对象 JSON.parse()，将JSON对象转换成JSON字符串 JSON.stringify()。</p> <h2 id="_10-函数声明与函数表达式的区别"><a href="#_10-函数声明与函数表达式的区别" class="header-anchor">#</a> 10 函数声明与函数表达式的区别？</h2> <ul><li>在Javscript中，解析器在向执行环境中加载数据时，对函数声明和函数表达式并非是一视同仁的，解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；</li> <li>至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解析执行。</li></ul> <h2 id="_11-javascript中定时器"><a href="#_11-javascript中定时器" class="header-anchor">#</a> 11 JavaScript中定时器?</h2> <p>定时器用于在设定的时间执行一段代码，或者在给定的时间间隔内重复该代码。</p> <ul><li>setTimeout（function，delay）函数用于启动在所述延迟之后调用特定功能的定时器。</li> <li>setInterval（function，delay）函数用于在提到的延迟中重复执行给定的功能，只有在取消时才停止。</li> <li>clearInterval（id）函数指示定时器停止。</li></ul> <h2 id="_12"><a href="#_12" class="header-anchor">#</a> 12</h2> <h2 id="_13-js中的继承有哪些"><a href="#_13-js中的继承有哪些" class="header-anchor">#</a> 13 js中的继承有哪些？</h2> <ul><li>原型链继承：通过使用call、apply方法可以在新创建的对象上执行构造函数,用父类的构造函数来增加子类的实例；</li> <li>构造函数继承：利用原型链来实现继承，超类的一个实例作为子类的原型；</li> <li>组合继承：最常用，利用构造继承和原型链组合；</li> <li>原型式继承：采用原型式继承并不需要定义一个类，传入参数obj,生成一个继承obj对象的对象；</li> <li>寄生式继承：原型式继承的一种拓展，创建一个仅仅用于封装继承过程的函数，然后在内部以某种方式增强对象，最后返回对象；</li> <li>寄生组合式继承：结合寄生式继承和组合式继承，完美实现不带两份超类属性的继承方式；</li></ul> <h2 id="_14-请谈谈组合继承及写一个例子"><a href="#_14-请谈谈组合继承及写一个例子" class="header-anchor">#</a> 14 请谈谈组合继承及写一个例子？</h2> <p>组合继承，指的是将原型链和借用构造函数的技术组合到一起, 避免了原型链和借用构造函数的缺点，融合了他们的优点，是JavaScript中最常用的继承模式。</p> <ul><li>思路是使用原型链实现对原型方法的继承，而通过借用构造函数来实现对实例属性的继承。</li> <li>既通过在原型上定义方法实现了函数的复用，又能够保证每个实例都有它自己的属性。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function SuperType(name){
+  this.name=name;
+  this.colors=[&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];
+}
+SuperType.prototype.sayName=function(){
+  alert(this.name);
+};
+function SubType(name, age){
+  //继承属性    使用借用构造函数实现对实例属性的继承
+  SuperType.call(this,name);
+  this.age=age;
+}
+//继承方法     使用原型链实现
+SubType.prototype=new SuperType();
+SubType.prototype.constructor=SubType;
+subType.prototype.sayAge=function(){
+  alert(this.age);
+};
+var instance1=new SubType(&quot;mary&quot;, 22);
+instance1.colors.push(&quot;black&quot;);
+alert(instance1.colors);   //red,blue,green,black
+instance1.sayName();  //mary
+instance1.sayAge();  //22
+
+var instance2=new SubType(&quot;greg&quot;, 25);
+alert(instance2.colors);   //red,blue,green
+instance2.sayName();  //greg
+instance2.sayAge();  //25
+</code></pre></div><h2 id="_15-下面三段程序的结果是"><a href="#_15-下面三段程序的结果是" class="header-anchor">#</a> 15 下面三段程序的结果是？</h2> <div class="language- extra-class"><pre class="language-text"><code>function a() {}
+var a
+console.log(typeof a)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>var a = 1;  
+function test() {  
+  console.log(a);  
+  var a = 2; 
+}  
+test();
+
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>var a = 10;
+function a(a) {
+  console.log(a);
+  var a = 12;
+}
+a(11);
+</code></pre></div><ul><li>js语言本身具有预处理机制，js引擎在预处理期对所有声明的变量和函数进行处理，就是先把变量进行声明并读到内存里。</li> <li>当变量名和函数名一致时后者会覆盖前者, 所以第一段的结果为 function；</li> <li>而第二段程序，外面声明了全局变量a，值为1，但里面把a声明成了局部变量，函数内部的预处理顺序为先声明var a；然后console.log(a)，最后a=2；a=2这赋值步骤是在console.log(a)后面执行的，所以我们运行时就看到undefined了。如果函数里面去掉var，那么打印出来的值就是1了，然后全局变量a又被赋值为2。</li> <li>所以第三段程序，先预处理var a；然后预处理整个a函数, 此时a的typeof为function, 接下来再给c赋值为10，即c=10，typeof c为number了; 最后在执行a(10)调用函数,当然就会报 a 不是一个函数的错误了，因为它现在是一个整型变量了。</li></ul> <h2 id="_16-下面这段程序的结果是"><a href="#_16-下面这段程序的结果是" class="header-anchor">#</a> 16 下面这段程序的结果是？</h2> <div class="language- extra-class"><pre class="language-text"><code>for (var i = 0; i &lt; 5; i++) {
+ setTimeout(function() {
+  console.log(i);
+ }, 1000);
+}
+ 
+console.log(i);
+</code></pre></div><ul><li>只要你对 JS 中同步和异步代码的区别、变量作用域、闭包等概念有正确的理解，就知道正确答案是5,5,5,5,5,5；</li> <li>若用-&gt;表示其前后的两次输出之间有 1 秒，而逗号表示间隔可以忽略，结果是？ 循环执行过程中，几乎同时设置了 5 个定时器，一般情况下，这些定时器都会在 1 秒之后触发，而循环完的输出是立即执行的, 所以结果是 5 -&gt; 5,5,5,5,5；</li> <li>如果期望代码的输出变成：5 -&gt; 0,1,2,3,4，该怎么改造代码？ 巧妙的利用 IIFE（声明即执行的函数表达式）来解决闭包造成的问题, 相当于把i赋值给了j这个局部变量:<div class="language- extra-class"><pre class="language-text"><code>for (var i = 0; i &lt; 5; i++) {
+(function(j) { 
+  setTimeout(function() {
+  console.log(j);
+  }, 1000);
+})(i);
+}
+console.log(i);
+</code></pre></div></li> <li>有没有更符合直觉的做法？ 利用 JS 中基本类型的参数传递是按值传递的特征, 对循环体稍做手脚，让负责输出的那段代码能拿到每次循环的 i 值即可:<div class="language- extra-class"><pre class="language-text"><code>var print = function (i) {
+setTimeout(function() {
+  console.log(i);
+}, 1000);
+};
+for (var i = 0; i &lt; 5; i++) {
+  print(i); // 传递到 print 的 i 值被复制了
+}
+console.log(i);
+</code></pre></div></li> <li>如果期望代码的输出变成 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5，并且要求原有的代码块中的循环和两处 console.log 不变，该怎么改造代码？<div class="language- extra-class"><pre class="language-text"><code>for (var i = 0; i &lt; 5; i++) {
+  (function(j) {
+    setTimeout(function() {
+    console.log(j);
+    }, 1000 * j)); // 这里修改 0~4 的定时器时间
+  })(i);
+}
+
+setTimeout(function() { // 这里增加定时器，超时设置为 5 秒
+  console.log(i);
+}, 1000 * i);
+</code></pre></div></li> <li>有没有基于ES6 Promise 的解决方案 ?<div class="language- extra-class"><pre class="language-text"><code>const tasks = [];
+for (var i = 0; i &lt; 5; i++) { 
+  ((j) =&gt; {
+    tasks.push(new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      console.log(j);
+      resolve(); // 一定要 resolve
+    }, 1000 * j); 
+    }));
+  })(i);
+}
+
+Promise.all(tasks).then(() =&gt; {
+  setTimeout(() =&gt; {
+    console.log( i);
+  }, 1000); // 只需把超时设置为 1 秒
+});
+</code></pre></div></li> <li>把上面 i 的声明改成 let，怎么做？<div class="language- extra-class"><pre class="language-text"><code>const tasks = [];
+for (let i = 0; i &lt; 5; i++) { 
+  tasks.push(new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
+      console.log(j);
+      resolve(); // 一定要 resolve
+    }, 1000 * j); 
+  }));
+}
+
+Promise.all(tasks).then(() =&gt; {
+  setTimeout(() =&gt; {
+    console.log( i);
+  }, 1000); // 只需把超时设置为 1 秒
+});
+</code></pre></div></li> <li>有没有代码层次更好的做法？<div class="language- extra-class"><pre class="language-text"><code>const tasks = []; // 存放异步操作的 Promise
+const print = (i) =&gt; new Promise((resolve) =&gt; {
+  setTimeout(() =&gt; {
+    console.log(i);
+    resolve();
+  }, 1000 * i);
+});
+
+// 获得全部的异步操作
+for (var i = 0; i &lt; 5; i++) {
+  tasks.push(print(i));
+}
+
+// 输出最后的 i
+Promise.all(tasks).then(() =&gt; {
+  setTimeout(() =&gt; {
+    console.log(i);
+  }, 1000);
+});
+</code></pre></div></li> <li>如何使用 ES7 中的 async await 特性来让这段代码变的更简洁？<div class="language- extra-class"><pre class="language-text"><code>  const sleep = (t) =&gt; new Promise((resolve) =&gt; {
+    setTimeout(resolve, t);
+  });
+  
+  (async () =&gt; { 
+    for (var i = 0; i &lt; 5; i++) {
+      await sleep(1000);
+      console.log(i);
+    }
+    await sleep(1000);
+    console.log(i);
+  })();
+</code></pre></div></li> <li>还能优化吗？<div class="language- extra-class"><pre class="language-text"><code>  const sleep = (t) =&gt; new Promise((resolve) =&gt; {
+    setTimeout(resolve, t);
+  });
+  
+  const print = async () =&gt; { 
+    for (let i = 0; i &lt;= 5; i++) {
+      await sleep(1000);
+      console.log(i);
+    }
+  };
+
+  print();
+</code></pre></div></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="kanbanniang" data-v-ee8d62e6><div class="banniang-container" style="display:;" data-v-ee8d62e6><div class="messageBox" style="position:absolut;height:auto;padding:20px 10px;right:28px;bottom:170px;font-weight:bold;background:linear-gradient(270deg,#76ea8c,#0ac497);border-radius:10px;color:#fff;display:none;" data-v-ee8d62e6>
+      欢迎你的关注 
+    </div> <div class="operation" style="right:50px;bottom:40px;display:none;" data-v-ee8d62e6><i class="kbnfont kbn-ban-home ban-home" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-message message" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-close close" data-v-ee8d62e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-ee8d62e6><i class="kbnfont kbn-ban-info info" data-v-ee8d62e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-ee8d62e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:40px;bottom:-20px;opacity:0.9;" data-v-ee8d62e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-ee8d62e6>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#f9bcdd" loop="loop" order="random" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-folded="true" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/blog/assets/js/app.687ffe2b.js" defer></script><script src="/blog/assets/js/3.ff536d22.js" defer></script><script src="/blog/assets/js/1.7fa5a73b.js" defer></script><script src="/blog/assets/js/100.0fd57d77.js" defer></script>
+  </body>
+</html>

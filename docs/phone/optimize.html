@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>性能优化（一） | 天宝的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="ltbicon.ico">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.9ac22a1b.css" as="style"><link rel="preload" href="/blog/assets/js/app.687ffe2b.js" as="script"><link rel="preload" href="/blog/assets/js/3.ff536d22.js" as="script"><link rel="preload" href="/blog/assets/js/1.7fa5a73b.js" as="script"><link rel="preload" href="/blog/assets/js/10.7811cf9c.js" as="script"><link rel="prefetch" href="/blog/assets/js/100.0fd57d77.js"><link rel="prefetch" href="/blog/assets/js/101.d7e10aed.js"><link rel="prefetch" href="/blog/assets/js/102.a802fa26.js"><link rel="prefetch" href="/blog/assets/js/103.2bd3f5cf.js"><link rel="prefetch" href="/blog/assets/js/104.b82e3c16.js"><link rel="prefetch" href="/blog/assets/js/105.0e864923.js"><link rel="prefetch" href="/blog/assets/js/106.8aa4623e.js"><link rel="prefetch" href="/blog/assets/js/107.8b6da6d3.js"><link rel="prefetch" href="/blog/assets/js/108.635143a1.js"><link rel="prefetch" href="/blog/assets/js/109.c983a152.js"><link rel="prefetch" href="/blog/assets/js/11.8bf50aa2.js"><link rel="prefetch" href="/blog/assets/js/110.fa0b5178.js"><link rel="prefetch" href="/blog/assets/js/111.9970a0b3.js"><link rel="prefetch" href="/blog/assets/js/112.faee7154.js"><link rel="prefetch" href="/blog/assets/js/113.6b841150.js"><link rel="prefetch" href="/blog/assets/js/114.ade88f64.js"><link rel="prefetch" href="/blog/assets/js/115.9689fd9e.js"><link rel="prefetch" href="/blog/assets/js/116.935a74b2.js"><link rel="prefetch" href="/blog/assets/js/117.4254d6a2.js"><link rel="prefetch" href="/blog/assets/js/118.3d4dd0ae.js"><link rel="prefetch" href="/blog/assets/js/119.98962333.js"><link rel="prefetch" href="/blog/assets/js/12.5703efc2.js"><link rel="prefetch" href="/blog/assets/js/120.ced6b99e.js"><link rel="prefetch" href="/blog/assets/js/121.ccd81d4f.js"><link rel="prefetch" href="/blog/assets/js/122.8d9244f4.js"><link rel="prefetch" href="/blog/assets/js/123.eb3ec25c.js"><link rel="prefetch" href="/blog/assets/js/124.7d44ab6b.js"><link rel="prefetch" href="/blog/assets/js/125.1d8fe1a9.js"><link rel="prefetch" href="/blog/assets/js/126.0a27828d.js"><link rel="prefetch" href="/blog/assets/js/127.e2401e24.js"><link rel="prefetch" href="/blog/assets/js/128.0a210a87.js"><link rel="prefetch" href="/blog/assets/js/129.459e7171.js"><link rel="prefetch" href="/blog/assets/js/13.4f40b008.js"><link rel="prefetch" href="/blog/assets/js/130.647ef7a4.js"><link rel="prefetch" href="/blog/assets/js/131.760e43f5.js"><link rel="prefetch" href="/blog/assets/js/132.bd66c55c.js"><link rel="prefetch" href="/blog/assets/js/133.3506297d.js"><link rel="prefetch" href="/blog/assets/js/134.68dba789.js"><link rel="prefetch" href="/blog/assets/js/135.e4abb66e.js"><link rel="prefetch" href="/blog/assets/js/136.569d2a52.js"><link rel="prefetch" href="/blog/assets/js/137.639eeabc.js"><link rel="prefetch" href="/blog/assets/js/138.3cfc0811.js"><link rel="prefetch" href="/blog/assets/js/139.4aab0e24.js"><link rel="prefetch" href="/blog/assets/js/14.1f525197.js"><link rel="prefetch" href="/blog/assets/js/140.e497184d.js"><link rel="prefetch" href="/blog/assets/js/141.2e1ef077.js"><link rel="prefetch" href="/blog/assets/js/142.ecf60e8c.js"><link rel="prefetch" href="/blog/assets/js/143.ef1fc9a3.js"><link rel="prefetch" href="/blog/assets/js/144.30ee7fe4.js"><link rel="prefetch" href="/blog/assets/js/145.5380861a.js"><link rel="prefetch" href="/blog/assets/js/146.c7638a16.js"><link rel="prefetch" href="/blog/assets/js/147.51c74ed4.js"><link rel="prefetch" href="/blog/assets/js/148.38ab89ba.js"><link rel="prefetch" href="/blog/assets/js/149.d66425c7.js"><link rel="prefetch" href="/blog/assets/js/15.28dbd265.js"><link rel="prefetch" href="/blog/assets/js/150.33b52a68.js"><link rel="prefetch" href="/blog/assets/js/151.d0f10f89.js"><link rel="prefetch" href="/blog/assets/js/152.f7a60845.js"><link rel="prefetch" href="/blog/assets/js/153.5860859c.js"><link rel="prefetch" href="/blog/assets/js/154.74a0c170.js"><link rel="prefetch" href="/blog/assets/js/155.41556a70.js"><link rel="prefetch" href="/blog/assets/js/156.816610c8.js"><link rel="prefetch" href="/blog/assets/js/157.a5704751.js"><link rel="prefetch" href="/blog/assets/js/158.76d7e1d1.js"><link rel="prefetch" href="/blog/assets/js/159.5b9426eb.js"><link rel="prefetch" href="/blog/assets/js/16.643901bb.js"><link rel="prefetch" href="/blog/assets/js/160.880b0add.js"><link rel="prefetch" href="/blog/assets/js/161.8bb033d1.js"><link rel="prefetch" href="/blog/assets/js/162.4f9d9e66.js"><link rel="prefetch" href="/blog/assets/js/163.de1f884e.js"><link rel="prefetch" href="/blog/assets/js/164.facff600.js"><link rel="prefetch" href="/blog/assets/js/165.fd077cf6.js"><link rel="prefetch" href="/blog/assets/js/17.b63583ce.js"><link rel="prefetch" href="/blog/assets/js/18.83d571a3.js"><link rel="prefetch" href="/blog/assets/js/19.03b696f0.js"><link rel="prefetch" href="/blog/assets/js/20.f9740790.js"><link rel="prefetch" href="/blog/assets/js/21.d6d9c3a3.js"><link rel="prefetch" href="/blog/assets/js/22.0dd3eafe.js"><link rel="prefetch" href="/blog/assets/js/23.2551f809.js"><link rel="prefetch" href="/blog/assets/js/24.0cc0d67f.js"><link rel="prefetch" href="/blog/assets/js/25.0df0ac85.js"><link rel="prefetch" href="/blog/assets/js/26.5d50b9e4.js"><link rel="prefetch" href="/blog/assets/js/27.44305569.js"><link rel="prefetch" href="/blog/assets/js/28.915e74c8.js"><link rel="prefetch" href="/blog/assets/js/29.4719dafe.js"><link rel="prefetch" href="/blog/assets/js/30.96f0297d.js"><link rel="prefetch" href="/blog/assets/js/31.66621384.js"><link rel="prefetch" href="/blog/assets/js/32.8e6fdf52.js"><link rel="prefetch" href="/blog/assets/js/33.14e4ecc0.js"><link rel="prefetch" href="/blog/assets/js/34.1a3484c8.js"><link rel="prefetch" href="/blog/assets/js/35.9f0ae752.js"><link rel="prefetch" href="/blog/assets/js/36.6e9bcb65.js"><link rel="prefetch" href="/blog/assets/js/37.46bdcf5f.js"><link rel="prefetch" href="/blog/assets/js/38.571c3ed1.js"><link rel="prefetch" href="/blog/assets/js/39.9f73485e.js"><link rel="prefetch" href="/blog/assets/js/4.a977e4e6.js"><link rel="prefetch" href="/blog/assets/js/40.e9026e9b.js"><link rel="prefetch" href="/blog/assets/js/41.bec4aa5f.js"><link rel="prefetch" href="/blog/assets/js/42.894e4c86.js"><link rel="prefetch" href="/blog/assets/js/43.fee1a1e3.js"><link rel="prefetch" href="/blog/assets/js/44.1e48416f.js"><link rel="prefetch" href="/blog/assets/js/45.50d0485a.js"><link rel="prefetch" href="/blog/assets/js/46.eb4e0e29.js"><link rel="prefetch" href="/blog/assets/js/47.8aef9542.js"><link rel="prefetch" href="/blog/assets/js/48.a7a422cd.js"><link rel="prefetch" href="/blog/assets/js/49.62def235.js"><link rel="prefetch" href="/blog/assets/js/5.f38d24eb.js"><link rel="prefetch" href="/blog/assets/js/50.d56cc481.js"><link rel="prefetch" href="/blog/assets/js/51.b7fdf9ea.js"><link rel="prefetch" href="/blog/assets/js/52.068bc616.js"><link rel="prefetch" href="/blog/assets/js/53.f7228307.js"><link rel="prefetch" href="/blog/assets/js/54.27b734f9.js"><link rel="prefetch" href="/blog/assets/js/55.d2527b46.js"><link rel="prefetch" href="/blog/assets/js/56.ee533c2b.js"><link rel="prefetch" href="/blog/assets/js/57.57a367a8.js"><link rel="prefetch" href="/blog/assets/js/58.c43796d6.js"><link rel="prefetch" href="/blog/assets/js/59.0c3f6f10.js"><link rel="prefetch" href="/blog/assets/js/6.c5800dc4.js"><link rel="prefetch" href="/blog/assets/js/60.ca9096aa.js"><link rel="prefetch" href="/blog/assets/js/61.2ff75e19.js"><link rel="prefetch" href="/blog/assets/js/62.dc27ceed.js"><link rel="prefetch" href="/blog/assets/js/63.e741e1db.js"><link rel="prefetch" href="/blog/assets/js/64.7161b504.js"><link rel="prefetch" href="/blog/assets/js/65.ba751267.js"><link rel="prefetch" href="/blog/assets/js/66.16cfbc18.js"><link rel="prefetch" href="/blog/assets/js/67.1976d51b.js"><link rel="prefetch" href="/blog/assets/js/68.72e3dd60.js"><link rel="prefetch" href="/blog/assets/js/69.17c5fd5d.js"><link rel="prefetch" href="/blog/assets/js/7.f10b9e9a.js"><link rel="prefetch" href="/blog/assets/js/70.25106d2b.js"><link rel="prefetch" href="/blog/assets/js/71.0eb8af30.js"><link rel="prefetch" href="/blog/assets/js/72.5a69e4cf.js"><link rel="prefetch" href="/blog/assets/js/73.5ed13df1.js"><link rel="prefetch" href="/blog/assets/js/74.87b7a5a0.js"><link rel="prefetch" href="/blog/assets/js/75.d54720c8.js"><link rel="prefetch" href="/blog/assets/js/76.fb6decb6.js"><link rel="prefetch" href="/blog/assets/js/77.f07a65c5.js"><link rel="prefetch" href="/blog/assets/js/78.f74ac6e9.js"><link rel="prefetch" href="/blog/assets/js/79.abf78ffc.js"><link rel="prefetch" href="/blog/assets/js/8.2cce7b77.js"><link rel="prefetch" href="/blog/assets/js/80.0fceca43.js"><link rel="prefetch" href="/blog/assets/js/81.a5b39edf.js"><link rel="prefetch" href="/blog/assets/js/82.e8b4a8ab.js"><link rel="prefetch" href="/blog/assets/js/83.652394c5.js"><link rel="prefetch" href="/blog/assets/js/84.582d043e.js"><link rel="prefetch" href="/blog/assets/js/85.9c965c7d.js"><link rel="prefetch" href="/blog/assets/js/86.6141b58b.js"><link rel="prefetch" href="/blog/assets/js/87.45c26684.js"><link rel="prefetch" href="/blog/assets/js/88.1cbf5f2d.js"><link rel="prefetch" href="/blog/assets/js/89.b8f01749.js"><link rel="prefetch" href="/blog/assets/js/9.e474432d.js"><link rel="prefetch" href="/blog/assets/js/90.5cf46f3e.js"><link rel="prefetch" href="/blog/assets/js/91.09818d72.js"><link rel="prefetch" href="/blog/assets/js/92.b736e658.js"><link rel="prefetch" href="/blog/assets/js/93.120031ba.js"><link rel="prefetch" href="/blog/assets/js/94.ab208182.js"><link rel="prefetch" href="/blog/assets/js/95.9f305b54.js"><link rel="prefetch" href="/blog/assets/js/96.d85f3c59.js"><link rel="prefetch" href="/blog/assets/js/97.ec688ab6.js"><link rel="prefetch" href="/blog/assets/js/98.92ba50b2.js"><link rel="prefetch" href="/blog/assets/js/99.bf13c944.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9ac22a1b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-36818f98><div data-v-36818f98><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-36818f98 data-v-36818f98><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-0541ff4e data-v-36818f98 data-v-36818f98><h3 class="title" style="display:none;" data-v-0541ff4e data-v-0541ff4e>天宝的博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-0541ff4e data-v-0541ff4e><input type="password" value="" data-v-0541ff4e> <span data-v-0541ff4e>Konck! Knock!</span> <button data-v-0541ff4e>OK</button></label> <div class="footer" style="display:none;" data-v-0541ff4e data-v-0541ff4e><span data-v-0541ff4e><i class="iconfont reco-theme" data-v-0541ff4e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-0541ff4e>vuePress-theme-reco</a></span> <span data-v-0541ff4e><i class="iconfont reco-copyright" data-v-0541ff4e></i> <a data-v-0541ff4e><span data-v-0541ff4e>天宝的博客</span>
+            
+          <span data-v-0541ff4e>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-36818f98><header class="navbar" data-v-36818f98><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/ltbLogo.png" alt="天宝的博客" class="logo"> <span class="site-name">天宝的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">选择主题</h4> <ul class="color-mode-options"><li class="dark">
+      黑色
+    </li><li class="auto active">
+      自动
+    </li><li class="light">
+      白色
+    </li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fun/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/eslint.html" class="nav-link"><i class="iconfont undefined"></i>
+  eslint规则
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/scaffold.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入浅出前端脚手架
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/md.html" class="nav-link"><i class="iconfont undefined"></i>
+  markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/static/1_1.html" class="nav-link"><i class="iconfont undefined"></i>
+  全栈入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/dd/1-3.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS高级导读
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fe/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/coding/blog.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-tag"></i>
+      日常总结
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/inherit.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS继承
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js-tip.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS各种小知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/wechat.html" class="nav-link"><i class="iconfont undefined"></i>
+  公众号开发总结
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/mp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序原生开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/uniapp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序uni-app开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/phone/optimize.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  移动端优化与踩坑
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  web性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/es6/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  ES6知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  Git常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      webpack知识
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-base.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-note.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack随手记
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack配置vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack4 拆包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      技术积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS样式封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS方法封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS手写源码
+</a></li><li class="dropdown-item"><!----> <a href="/blog/skulpt/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入skulpt
+</a></li><li class="dropdown-item"><!----> <a href="/blog/scratch/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入scratch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  SSR搭建部署
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/c1.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用特效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      实战分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  开发环境配置参考
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue服务端渲染
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/iris.html" class="nav-link"><i class="iconfont undefined"></i>
+  go+vue前后端分离实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/uni.html" class="nav-link"><i class="iconfont undefined"></i>
+  uni-app多端开发回顾
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/koa.html" class="nav-link"><i class="iconfont undefined"></i>
+  koa+vue全栈开发实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试必备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/write/write.html" class="nav-link"><i class="iconfont undefined"></i>
+  笔试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      其他
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-36818f98></div> <aside class="sidebar" data-v-36818f98><div class="personal-info-wrapper" data-v-599e9414><img src="/blog/img/ltbLogo.png" alt="author-avatar" class="personal-img" data-v-599e9414> <h3 class="name" data-v-599e9414>
+    天宝的博客
+  </h3> <div class="num" data-v-599e9414><div data-v-599e9414><h3 data-v-599e9414>61</h3> <h6 data-v-599e9414>文章</h6></div> <div data-v-599e9414><h3 data-v-599e9414>9</h3> <h6 data-v-599e9414>标签</h6></div></div> <hr data-v-599e9414></div> <nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fun/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  环境配置
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/eslint.html" class="nav-link"><i class="iconfont undefined"></i>
+  eslint规则
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/scaffold.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入浅出前端脚手架
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/md.html" class="nav-link"><i class="iconfont undefined"></i>
+  markdown语法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/static/1_1.html" class="nav-link"><i class="iconfont undefined"></i>
+  全栈入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/js/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/dd/1-3.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS高级导读
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fe/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  前端进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/coding/blog.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-tag"></i>
+      日常总结
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/inherit.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS继承
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js-tip.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS各种小知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/wechat.html" class="nav-link"><i class="iconfont undefined"></i>
+  公众号开发总结
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/mp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序原生开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/wx/uniapp.html" class="nav-link"><i class="iconfont undefined"></i>
+  小程序uni-app开发
+</a></li><li class="dropdown-item"><!----> <a href="/blog/phone/optimize.html" aria-current="page" class="nav-link router-link-exact-active router-link-active"><i class="iconfont undefined"></i>
+  移动端优化与踩坑
+</a></li><li class="dropdown-item"><!----> <a href="/blog/fun/opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  web性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/es6/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  ES6知识点
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  Git常用命令
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      webpack知识
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-base.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack入门
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-note.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack随手记
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack配置vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/webpack/webpack-opt.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack4 拆包
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      技术积累
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/often/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  CSS样式封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS方法封装
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/code.html" class="nav-link"><i class="iconfont undefined"></i>
+  JS手写源码
+</a></li><li class="dropdown-item"><!----> <a href="/blog/skulpt/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入skulpt
+</a></li><li class="dropdown-item"><!----> <a href="/blog/scratch/1.html" class="nav-link"><i class="iconfont undefined"></i>
+  深入scratch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/often/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  SSR搭建部署
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/c1.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用特效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      实战分享
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/env.html" class="nav-link"><i class="iconfont undefined"></i>
+  开发环境配置参考
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/ssr.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue服务端渲染
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/iris.html" class="nav-link"><i class="iconfont undefined"></i>
+  go+vue前后端分离实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/uni.html" class="nav-link"><i class="iconfont undefined"></i>
+  uni-app多端开发回顾
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/koa.html" class="nav-link"><i class="iconfont undefined"></i>
+  koa+vue全栈开发实战
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试必备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/write/write.html" class="nav-link"><i class="iconfont undefined"></i>
+  笔试题
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-github"></i>
+      其他
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>移动端优化与踩坑</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/phone/optimize.html" aria-current="page" class="active sidebar-link">性能优化（一）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#优化网页加载速度" class="sidebar-link">优化网页加载速度</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#如何减少请求数量" class="sidebar-link">如何减少请求数量？</a></li><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#_1-合并图标-减少网络请求" class="sidebar-link">1.合并图标，减少网络请求</a></li><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#_2-用base64减少不必要的网络请求" class="sidebar-link">2.用base64减少不必要的网络请求</a></li><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#_4、js-css按需打包" class="sidebar-link">4、JS/CSS按需打包</a></li><li class="sidebar-sub-header"><a href="/blog/phone/optimize.html#_5、延迟加载ga统计" class="sidebar-link">5、延迟加载ga统计</a></li></ul></li></ul></li><li><a href="/blog/phone/optimize2.html" class="sidebar-link">性能优化（二）</a></li><li><a href="/blog/phone/mobile-bug.html" class="sidebar-link">踩坑</a></li><li><a href="/blog/phone/wx-share.html" class="sidebar-link">微信分享篇</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-0541ff4e data-v-36818f98><h3 class="title" style="display:none;" data-v-0541ff4e data-v-0541ff4e>性能优化（一）</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-0541ff4e data-v-0541ff4e><input type="password" value="" data-v-0541ff4e> <span data-v-0541ff4e>Konck! Knock!</span> <button data-v-0541ff4e>OK</button></label> <div class="footer" style="display:none;" data-v-0541ff4e data-v-0541ff4e><span data-v-0541ff4e><i class="iconfont reco-theme" data-v-0541ff4e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-0541ff4e>vuePress-theme-reco</a></span> <span data-v-0541ff4e><i class="iconfont reco-copyright" data-v-0541ff4e></i> <a data-v-0541ff4e><span data-v-0541ff4e>天宝的博客</span>
+            
+          <span data-v-0541ff4e>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-36818f98><main class="page"><div class="page-title" style="display:none;"><h1>性能优化（一）</h1> <hr> <div data-v-4feec9bb><i class="iconfont reco-account" data-v-4feec9bb><span data-v-4feec9bb>天宝的博客</span></i> <!----> <i class="iconfont reco-eye" data-v-4feec9bb><span id="/blog/phone/optimize.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-4feec9bb><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-4feec9bb><span class="tag-item" data-v-4feec9bb>opt</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>过去一段时间我参与了移动端的开发，遇到了许多与性能优化方面的问题，遂做了详细的总结。</p> <h2 id="优化网页加载速度"><a href="#优化网页加载速度" class="header-anchor">#</a> 优化网页加载速度</h2> <p>像我们最近做的各种落地页无论是设计还是内容都追求高品质，于是丰富的图文混合成了标配：顶部的banner图，课程介绍的配图，有趣的gif图等等。<br>
+特别严重的时候，一篇文章有十多个gif图，加载花费的时间10-20秒之长，加载消耗的流量几十M之多，严重影响了用户体验！尤其是Mobile端，一寸流量一寸金；3-5s打不开页面，用户都会直接逃离。所以网页加载速度优化势在必行！</p> <p><b>我们都知道一个网页的加载流程大致如下：</b><br>
+1、解析HTML结构。<br>
+2、加载外部脚本和样式表文件。<br>
+3、解析并执行脚本代码。// 部分脚本会阻塞页面的加载<br>
+4、DOM树构建完成。//DOMContentLoaded 事件<br>
+5、加载图片等外部文件。<br>
+6、页面加载完毕。//load 事件<br>
+一句话就是：请求HTML，然后顺带将HTML依赖的JS/CSS/iconfont等其他资源一并请求过来。<br>
+那么优化网页的加载速度，最本质的方式就是：<b>减少请求数量 与 减小请求大小</b>。<br></p> <p><b>减小请求数量</b><br>
+1、将小图标合并成sprite图或者iconfont字体文件<br>
+2、用base64减少不必要的网络请求<br>
+3、图片延迟加载<br>
+4、JS/CSS按需打包<br>
+5、延迟加载ga统计<br>
+6、等等...<br></p> <p><b>减小请求大小</b><br>
+1、JS/CSS/HTML压缩<br>
+2、gzip压缩<br>
+3、JS/CSS按需加载<br>
+4、图片压缩，jpg优化<br>
+5、webp优化 &amp; srcset优化<br>
+6、等等...<br></p> <p>JS/CSS按需打包 和 JS/CSS按需加载是两个不同的概念：<br>
+JS/CSS按需打包是预编译发生的事情，保证只打包当前页面相关的逻辑。<br>
+JS/CSS按需加载是运行时发生的事情，保证只加载当前页面第一时间使用到的逻辑。<br></p> <p>接下来我们将结合两个本质的优化方式介绍具体的实践方法。</p> <h3 id="如何减少请求数量"><a href="#如何减少请求数量" class="header-anchor">#</a> 如何减少请求数量？</h3> <h3 id="_1-合并图标-减少网络请求"><a href="#_1-合并图标-减少网络请求" class="header-anchor">#</a> 1.合并图标，减少网络请求</h3> <p>合并图标是减少网络请求的常见的优化手段，网页中的小图标特征是体积小、数量多，而浏览器同时发起的并行请求数量又是有限制的，所以这些小图标会严重的影响网页的加载速度，阻碍关键内容的请求和呈现.</p> <p><b>sprite图</b><br>
+合并sprite图是慢工细活儿，并没有特别大的技术含量，但却是每个前端开发都必须掌握的技术。<br>
+刚入门的前端直接手动切图拼图即可。<br>
+经验丰富的前端可以尝试利用构建工具实现自动化，推荐使用。<b>gulp.spritesmith</b>插件。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 构建视图文件</span>
+gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'sprites'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> spriteData <span class="token operator">=</span> gulp<span class="token punctuation">.</span><span class="token function">src</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>src<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">plumber</span><span class="token punctuation">(</span>handleErrors<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">newer</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>imgDest<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">logger</span><span class="token punctuation">(</span><span class="token punctuation">{</span> showChange<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">spritesmith</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            cssName<span class="token operator">:</span> <span class="token string">'sprites.css'</span><span class="token punctuation">,</span>
+            imgName<span class="token operator">:</span> <span class="token string">'sprites.png'</span><span class="token punctuation">,</span>
+            cssTemplate<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./gulp/lib/template.css.handlebars'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> imgStream <span class="token operator">=</span> spriteData<span class="token punctuation">.</span>img
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span><span class="token function">buffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>imgDest<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> cssStream <span class="token operator">=</span> spriteData<span class="token punctuation">.</span>css
+        <span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>gulp<span class="token punctuation">.</span><span class="token function">dest</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>cssDest<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token function">merge</span><span class="token punctuation">(</span><span class="token punctuation">[</span>imgStream<span class="token punctuation">,</span> cssStream<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>sprite图不适合无线端的响应式场景，所以越来越作为一个备用方案。</p> <p><b>iconfont字体文件</b><br>
+iconfont字体文件是用字体编码的形式来实现图标效果，既然是文字，那就可以随意设置颜色设置大小，相对来说比sprite方案更好。但是它只适用于纯色图标。推荐使用 <b>阿里巴巴矢量图标库</b></p> <h3 id="_2-用base64减少不必要的网络请求"><a href="#_2-用base64减少不必要的网络请求" class="header-anchor">#</a> 2.用base64减少不必要的网络请求</h3> <p><img src="/blog/assets/img/2.b28f90ea.png" style="width:80%;"><br></p> <p>上文提到的sprite图和iconfont字体文件，对于有些场景并不适合，比如：<br>
+1、小背景图，无法放到精灵图中，通常循环平铺小块来设置大背景。<br>
+2、小gif图，无法放到精灵图中，发请求又太浪费。<br></p> <p><img src="/blog/assets/img/3.5b63916e.png" style="width:80%;"><br></p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>cssnano压缩css的时候，对于部分规则的base64 uri不能识别，会出现误伤，如下图，cssnano压缩的时候会将压缩为：
+<img src="/blog/assets/img/4.5f2be91e.png" style="width:90%;"><br></p></div> <p>原因是：cssnano会跳过data:image/data:application后面的字符串，但是不会跳过data:img，所以如果你使用的工具生成的是data:img，建议换工具或者直接将其修改为data:image。</p> <h4 id="_3-图片延迟加载"><a href="#_3-图片延迟加载" class="header-anchor">#</a> 3.图片延迟加载</h4> <p>图片是网页中流量占比最多的部分，也是需要重点优化的部分。<br>
+图片延迟加载的原理就是先不设置img的src属性，等合适的时机（比如滚动、滑动、出现在视窗内等）再把图片真实url放到img的src属性上。<br></p> <p><b>固定宽高值的图片</b>
+固定宽高值的图片延迟加载比较简单，因为宽高值都可以设置在css中，只需考虑src的替换问题，推荐使用<a>lazysizes</a>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 引入js文件</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">&quot;lazysizes.min.js&quot;</span> async<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token comment">// 非响应式 例子</span>
+<span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">&quot;&quot;</span> data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;image.jpg&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// 响应式 例子，自动计算合适的图片</span>
+<span class="token operator">&lt;</span>img
+    data<span class="token operator">-</span>sizes<span class="token operator">=</span><span class="token string">&quot;auto&quot;</span>
+    data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;image2.jpg&quot;</span>
+    data<span class="token operator">-</span>srcset<span class="token operator">=</span>&quot;image1<span class="token punctuation">.</span>jpg <span class="token number">300</span>w<span class="token punctuation">,</span>
+    image2<span class="token punctuation">.</span>jpg <span class="token number">600</span>w<span class="token punctuation">,</span>
+    image3<span class="token punctuation">.</span>jpg <span class="token number">900</span>w<span class="token string">&quot; class=&quot;</span>lazyload&quot; <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token comment">// iframe 例子</span>
+<span class="token operator">&lt;</span>iframe frameborder<span class="token operator">=</span><span class="token string">&quot;0&quot;</span>
+    <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span>
+    allowfullscreen<span class="token operator">=</span><span class="token string">&quot;&quot;</span>
+    data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;//www.youtube.com/embed/ZfV-aYdU4uE&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>iframe<span class="token operator">&gt;</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">注意</p> <p>注意：浏览器解析img标签的时候，如果src属性为空，浏览器会认为这个图片是坏掉的图，会显示出图片的边框，影响市容。</p></div> <br> <img src="/blog/assets/img/5.5a32ac31.png" style="width:90%;"><br> <p>lazysizes延迟加载过程中会改变图片的class：默认lazyload，加载中lazyloading，加载结束：lazyloaded。结合这个特性我们有两种解决上述问题办法：<br>
+1、设置opacity:0，然后在显示的时候设置opacity:1。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 渐现 lazyload</span>
+<span class="token punctuation">.</span>lazyload<span class="token punctuation">,</span>
+<span class="token punctuation">.</span>lazyloading<span class="token punctuation">{</span>
+    opacity<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>lazyloaded<span class="token punctuation">{</span>
+    opacity<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    transition<span class="token operator">:</span> opacity <span class="token number">500</span>ms<span class="token punctuation">;</span> <span class="token comment">//加上transition就可以实现渐现的效果</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>2、用一张默认的图占位，比如1x1的透明图或者灰图。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span> 
+    src<span class="token operator">=</span>&quot;data<span class="token operator">:</span>image<span class="token operator">/</span>gif<span class="token punctuation">;</span>base64<span class="token punctuation">,</span>R0lGODlhAQABAAA
+       AACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw<span class="token operator">==</span>&quot; 
+    data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;真实url&quot;</span> 
+    alt<span class="token operator">=</span><span class="token string">&quot;&lt;%= article.title %&gt;&quot;</span><span class="token operator">&gt;</span>
+</code></pre></div><p>此外，为了让效果更佳，尤其是文章详情页中的大图，我们可以加上loading效果。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">.</span>article<span class="token operator">-</span>detail<span class="token operator">-</span>bd <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span>lazyload <span class="token punctuation">{</span>
+        opacity<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span>lazyloading <span class="token punctuation">{</span>
+        opacity<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        background<span class="token operator">:</span> #f7f7f7 <span class="token function">url</span><span class="token punctuation">(</span><span class="token operator">/</span>images<span class="token operator">/</span>loading<span class="token punctuation">.</span>gif<span class="token punctuation">)</span> no<span class="token operator">-</span>repeat center<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>固定宽高比的图片<br></p> <p>固定宽高比的图片延迟加载相对来说复杂很多，比如文章详情页的图片，由于设备的宽度值不确定，所以高度值也不确定，这时候工作的重心反倒放到了如何确定图片的高度上。<br>
+为什么要确定图片的高度呢？因为单个图片的加载是从上往下，所以会导致页面抖动，不仅用户体验很差，而且对于性能消耗很大，因为每次抖动都会触发reflow（重绘）事件。<br>
+固定宽高比的图片抖动问题，有下列两种主流的方式可以解决：<br>
+1、第一种方案使用padding-top或者padding-bottom来实现固定宽高比。优点是纯CSS方案，缺点是HTML冗余，并且对输出到第三方不友好。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">&quot;padding-top:75%&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>img data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+</code></pre></div><p>2、第二种方案在页面初始化阶段利用ratio设置实际宽高值，优点是html干净，对输出到第三方友好，缺点是依赖js，理论上会至少抖动一次。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>img data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;&quot;</span> alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span> data<span class="token operator">-</span>ratio<span class="token operator">=</span><span class="token string">&quot;0.75&quot;</span><span class="token operator">&gt;</span>
+</code></pre></div><p>那么，这个padding-top: 75%;和data-ratio=&quot;0.75&quot;的数据从哪儿来呢？在你上传图片的时候，需要后台给你返回原始宽高值，计算得到宽高比，然后保存到data-ratio上。
+我们的落地页采用的第二种方案，主要在于第一种方案对第三方输出不友好：需要对img设置额外的样式，但第三方平台通常不允许引入外部样式。
+确定第二种方案之后，我们定义了一个设置图片高度的函数：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 重置图片高度，仅限文章详情页</span>
+<span class="token keyword">function</span> <span class="token function">resetImgHeight</span><span class="token punctuation">(</span><span class="token parameter">els<span class="token punctuation">,</span> placeholder</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> ratio <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        i<span class="token punctuation">,</span> len<span class="token punctuation">,</span> width<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> els<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        els<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>src <span class="token operator">=</span> placeholder<span class="token punctuation">;</span>
+
+        width <span class="token operator">=</span> els<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>clientWidth<span class="token punctuation">;</span> <span class="token comment">//一定要使用clientWidth</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>els<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>attributes<span class="token punctuation">[</span><span class="token string">'data-ratio'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            ratio <span class="token operator">=</span> els<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>attributes<span class="token punctuation">[</span><span class="token string">'data-ratio'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            ratio <span class="token operator">=</span> <span class="token function">parseFloat</span><span class="token punctuation">(</span>ratio<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ratio<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            els<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token punctuation">(</span>width <span class="token operator">*</span> ratio<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'px'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>我们将以上代码的定义和调用都直接放到了HTML中，就为了一个目的，第一时间计算图片的高度值，降低用户感知到页面抖动的可能性，保证最佳效果。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 原生代码</span>
+<span class="token operator">&lt;</span>img alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span> 
+    data<span class="token operator">-</span>ratio<span class="token operator">=</span><span class="token string">&quot;0.562500&quot;</span> 
+    data<span class="token operator">-</span>format<span class="token operator">=</span><span class="token string">&quot;jpeg&quot;</span> 
+    <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyload&quot;</span> 
+    data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;http://img.qdaily.com/uploads/20160807124000WFJNyGam85slTC4H.jpg&quot;</span> 
+    src<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token operator">&gt;</span>
+
+<span class="token comment">// 解析之后的代码</span>
+<span class="token operator">&lt;</span>img alt<span class="token operator">=</span><span class="token string">&quot;&quot;</span> 
+    data<span class="token operator">-</span>ratio<span class="token operator">=</span><span class="token string">&quot;0.562500&quot;</span> 
+    data<span class="token operator">-</span>format<span class="token operator">=</span><span class="token string">&quot;jpeg&quot;</span> 
+    <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;lazyloaded&quot;</span> 
+    data<span class="token operator">-</span>src<span class="token operator">=</span><span class="token string">&quot;http://img.qdaily.com/uploads/20160807124000WFJNyGam85slTC4H.jpg&quot;</span> 
+    src<span class="token operator">=</span><span class="token string">&quot;http://img.qdaily.com/uploads/20160807124000WFJNyGam85slTC4H.jpg&quot;</span> 
+    style<span class="token operator">=</span><span class="token string">&quot;height: 323.438px;&quot;</span><span class="token operator">&gt;</span>
+</code></pre></div><p>我们不仅保存了宽高比，还保存了图片格式，是为了后期可以对gif做进一步的优化。</p> <p><b>注意事项</b>
+1、避免图片过早加载，把临界值调低一点。在实际项目中，并不需要过早就把图片请求过来，尤其是Mobile项目，过早请求不仅浪费流量，也会因为请求太多，导致页面加载速度变慢。
+2、为了最好的防抖效果，设置图片高度的JS代码内嵌到HTML中以便第一时间执行。
+3、根据图片宽度设置高度时，使用clientWidth而不是width。这是因为Safari中，第一时间执行的JS代码获取图片的width失败，所以使用clientWidth解决这个问题。</p> <h3 id="_4、js-css按需打包"><a href="#_4、js-css按需打包" class="header-anchor">#</a> 4、JS/CSS按需打包</h3> <p>按需打包是webpack独特的优势，如果有需要通过此种方式来管理模块之间的依赖关系，强烈推荐引入！webpack门槛较高，可以自己私下好好研究下。
+我们原来的项目是典型的多页应用，为了缓存通用代码，我们使用webpack按需打包的同时，还利用webpack的CommonsChunkPlugin 插件抽离出公用的JS/CSS代码，便于缓存，在请求数量和公用代码的缓存之间做了一个很好的平衡。</p> <h3 id="_5、延迟加载ga统计"><a href="#_5、延迟加载ga统计" class="header-anchor">#</a> 5、延迟加载ga统计</h3> <p><b>async &amp; defer属性</b></p> <p>html5中给script标签引入了async和defer属性。
+带有async属性的script标签，会在浏览器解析时立即下载脚本同时不阻塞后续的document渲染和script加载等事件，从而实现脚本的异步加载。
+带有defer属性的script标签，和async拥有类似的功能。并且他们有可以附带一个onload事件<script src="" defer="defer" onload="init()">。
+async和defer的区别在于：async属性会在脚本下载完成后无序立即执行，defer属性会在脚本下载完成后按照document结构顺序执行。
+由于defer和async的兼容性问题，我们通常使用动态创建script标签的方式来实现异步加载脚本，即document.write('&lt;script src=&quot;&quot; async&gt;</script>');，该方式也可以避免阻塞。</p> <p><b>ga统计代码</b></p> <p>ga统计代码采用就是动态创建script标签方案。
+该方法不阻塞页面渲染，不阻塞后续请求，但会阻塞window.onload事件，页面的表现方式是进度条一直加载或loading菊花一直转。
+所以我们延迟执行ga初始化代码，将其放到window.onload函数中去执行，可以防止ga脚本阻塞window.onload事件。从而让用户感受到更快的加载速度。</p> <img src="/blog/assets/img/6.49059ad5.png" style="width:80%;"></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="kanbanniang" data-v-ee8d62e6><div class="banniang-container" style="display:;" data-v-ee8d62e6><div class="messageBox" style="position:absolut;height:auto;padding:20px 10px;right:28px;bottom:170px;font-weight:bold;background:linear-gradient(270deg,#76ea8c,#0ac497);border-radius:10px;color:#fff;display:none;" data-v-ee8d62e6>
+      欢迎你的关注 
+    </div> <div class="operation" style="right:50px;bottom:40px;display:none;" data-v-ee8d62e6><i class="kbnfont kbn-ban-home ban-home" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-message message" data-v-ee8d62e6></i> <i class="kbnfont kbn-ban-close close" data-v-ee8d62e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-ee8d62e6><i class="kbnfont kbn-ban-info info" data-v-ee8d62e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-ee8d62e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:40px;bottom:-20px;opacity:0.9;" data-v-ee8d62e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-ee8d62e6>
+    看板娘
+  </div></div><canvas id="vuepress-canvas-cursor"></canvas><APlayer audio="" fixed="true" mini="true" autoplay="autoplay" theme="#f9bcdd" loop="loop" order="random" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-folded="true" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/blog/assets/js/app.687ffe2b.js" defer></script><script src="/blog/assets/js/3.ff536d22.js" defer></script><script src="/blog/assets/js/1.7fa5a73b.js" defer></script><script src="/blog/assets/js/10.7811cf9c.js" defer></script>
+  </body>
+</html>
