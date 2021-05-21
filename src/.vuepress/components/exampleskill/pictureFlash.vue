@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flash-container">
-      <img src="/blog/img/ltbLogo.png" alt />
+      <img src="/img/ltbLogo.png" alt />
     </div>
   </div>
 </template>
