@@ -126,6 +126,7 @@ module.exports = {
       '/es6/': genSidebarConfig('ES6知识点', ['1','2','3','4','5','6','7','8','9','10','11','12', '13', '14', '15', '16', '17']),
       '/interview/': genSidebarConfig('面试必备', ['js','es6','http', 'vue','webpack']),
       '/css/': genSidebarConfig('常用特效', ['c1','c2','c3','c4','c5','c6']),
+      '/coding/': genSidebarConfig('博客托管部署', ['blog','vercel']),
     },
     valineConfig: { // https://leancloud.cn/dashboard/applist.html#/apps
       appId: 'Te90DqtWO8zJeJvkbs2AJ3lB-gzGzoHsz',
